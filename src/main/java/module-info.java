@@ -1,4 +1,4 @@
-module com.example.prototypepattern {
+module com.example.demo {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -7,9 +7,10 @@ module com.example.prototypepattern {
     requires com.dlsc.formsfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
-    requires eu.hansolo.tilesfx;
+   // requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
 
-    opens com.example.prototypepattern to javafx.fxml;
-    exports com.example.prototypepattern;
+    opens com.example.demo to javafx.fxml;
+    exports com.example.demo;
+    exports com.example.demo.View;
 }

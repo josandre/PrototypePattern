@@ -1,42 +1,24 @@
-package com.example.prototypepattern.Model;
+package com.example.demo.Model;
 
-import com.example.prototypepattern.Enum.Materials;
-import com.example.prototypepattern.Enum.MaterialsToCover;
-import com.example.prototypepattern.Enum.Sizes;
-import com.example.prototypepattern.Enum.Tools;
+import com.example.demo.Enum.Materials;
+import com.example.demo.Enum.MaterialsToCover;
+import com.example.demo.Enum.Tools;
 
-import static com.example.prototypepattern.Enum.Materials.Steel;
-import static com.example.prototypepattern.Enum.MaterialsToCover.Plastic;
 
-public class Tool  {
+public abstract class Tool {
     private Enum<Materials> material;
     private String color;
     private String text;
     private Enum<MaterialsToCover> materialThatCoversIt;
     private int id;
-    private Enum<Sizes> size;
-
 
     private Enum<Tools> tool;
 
-    public Tool(Enum<Materials> material, String color, String text, Enum<MaterialsToCover> materialThatCoversIt, int id, Enum<Sizes> size,  Enum<Tools> tool) {
-        this.material = material;
-        this.color = color;
-        this.text = text;
-        this.materialThatCoversIt = materialThatCoversIt;
-        this.id = id;
-        this.size = size;
-        this.tool = tool;
-    }
 
 
-    public Tool(int id, Enum<Tools> tool, Enum<Sizes> size){
-        this.material = Steel;
-        this.id = id;
-        this.tool = tool;
-        this.color = "Silver";
-        this.materialThatCoversIt = Plastic;
-        this.size = size;
+
+    public Tool(){
+
     }
 
     public Enum<Materials> getMaterial() {
@@ -64,7 +46,7 @@ public class Tool  {
     }
 
     public Enum<MaterialsToCover> getMaterialThatCoversIt() {
-        return materialThatCoversIt;
+        return materialThatCoversIt ;
     }
 
     public void setMaterialThatCoversIt(Enum<MaterialsToCover> materialThatCoversIt) {
@@ -79,13 +61,6 @@ public class Tool  {
         this.id = id;
     }
 
-    public Enum<Sizes> getSize() {
-        return size;
-    }
-
-    public void setSize(Enum<Sizes> size) {
-        this.size = size;
-    }
 
     public Enum<Tools> getTool() {
         return tool;
@@ -97,14 +72,25 @@ public class Tool  {
 
     @Override
     public String toString() {
+        String materialCover;
+
+        if(this.materialThatCoversIt == null){
+            materialCover = "";
+        }else{
+            materialCover =  this.materialThatCoversIt.toString();
+        }
+
         return "Tool{" +
                 "material=" + material +
                 ", color='" + color + '\'' +
                 ", text='" + text + '\'' +
-                ", materialThatCoversIt=" + materialThatCoversIt +
+                ", materialThatCoversIt=" + materialCover +
                 ", id=" + id +
-                ", size=" + size +
                 ", tool=" + tool +
                 '}';
     }
+
+    public abstract Tool clone();
+
+
 }
