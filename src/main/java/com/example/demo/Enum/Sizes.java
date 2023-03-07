@@ -1,4 +1,4 @@
-package com.example.prototypepattern.Enum;
+package com.example.demo.Enum;
 
 public enum Sizes {
     Plus, Medium, Small

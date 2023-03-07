@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="540.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.View.MainScene">
+   <children>
+      <Label layoutX="172.0" layoutY="22.0" text="Welcome to BISOFT-12 company">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="269.0" layoutY="50.0" prefHeight="23.0" prefWidth="106.0" text="WholeSale Tools">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="181.0" layoutY="73.0" prefHeight="23.0" prefWidth="292.0" text="Choose the amount of tools you need in this order">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idSpannerAmount" layoutX="224.0" layoutY="281.0" prefHeight="26.0" prefWidth="34.0" promptText="0" />
+      <ImageView fitHeight="56.0" fitWidth="90.0" layoutX="213.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/spanner.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="124.0" layoutY="283.0" prefHeight="23.0" prefWidth="57.0" text="Amount">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="56.0" fitWidth="84.0" layoutX="331.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/drill.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="idPliersAmount" layoutX="352.0" layoutY="281.0" prefHeight="26.0" prefWidth="34.0" promptText="0" />
+      <ImageView fitHeight="56.0" fitWidth="84.0" layoutX="449.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/pliers.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="idDrillAmount1" layoutX="460.0" layoutY="281.0" prefHeight="26.0" prefWidth="34.0" promptText="0" />
+      <ImageView fitHeight="275.0" fitWidth="111.0" layoutX="488.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/TOOLS.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnCheckOrder" layoutX="276.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleCheckOrder" prefHeight="26.0" prefWidth="148.0" text="CheckOrder" textFill="#6b1111" />
+      <Label fx:id="idLabelCenfoTil" layoutX="57.0" layoutY="410.0" prefHeight="23.0" prefWidth="539.0" text="If you belong to the company Cenfo Til, prees the next button">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCenfoTil" layoutX="477.0" layoutY="409.0" mnemonicParsing="false" onAction="#handleCenfoTil" prefHeight="26.0" prefWidth="111.0" text="Cenfo til order" textFill="#6b1111" />
+   </children>
+</AnchorPane>
